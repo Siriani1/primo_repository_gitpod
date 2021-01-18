@@ -1,3 +1,4 @@
+<div class="card bg-success">
   <form >
     <div>
       <label for="spamText">Cose inutili:</label>
@@ -7,10 +8,11 @@
       <label for="spamNum">Spam:</label>
       <input name="spamNum" #newNum>
     </div>
-    <button (click)="spam(newText, newNum)">
+    <button (click)="spam(newText, newNum)" class="bg-primary">
       Submit spam
     </button>
   </form>
+</div>
 <ul>
   <li *ngFor="let article of articles">
     <app-spam [article]="article"></app-spam>
