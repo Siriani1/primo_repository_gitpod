@@ -1,20 +1,20 @@
 <div class="card bg-success">
-  <form >
+  <form class="form-group">
     <div>
-      <label for="spamText">Cose inutili:</label>
-      <input name="spamText" #newText>
+      <label for="email" for="spamText">Cose inutili:</label>
+      <input placeholder="Scrivi qualcosa" name="spamText" #newText>
     </div>
     <div>
       <label for="spamNum">Spam:</label>
-      <input name="spamNum" #newNum>
+      <input placeholder="quante volte?" name="spamNum" #newNum>
     </div>
-    <button (click)="spam(newText, newNum)" class="bg-primary">
+    <button type="submit" class="btn btn-default" (click)="spam(newText, newNum)" class="bg-primary">
       Submit spam
     </button>
   </form>
 </div>
-<ul>
-  <li *ngFor="let article of articles">
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let article of articles">
     <app-spam [article]="article"></app-spam>
   </li>
 </ul>
