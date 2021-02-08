@@ -2,17 +2,17 @@
   <form class="form-group">
     <div>
       <label for="email" for="spamText">a</label>
-      <input placeholder="prova@prova.it" name="spamText" #newText>
+      <input placeholder="prova@prova.it" name="a" #newA>
     </div>
     <div>
       <label for="spamNum">oggetto</label>
-      <input placeholder="saluti">
+      <input placeholder="saluti" name="oggetto" #newOggetto>
     </div>
     <div>
       <label for="spamNum">testo</label>
-      <input placeholder="ciao. Come stai?">
+      <input placeholder="ciao. Come stai?" name="testo" #newTesto>
     </div>
-    <button type="submit" class="btn btn-default"  class="bg-primary">
+    <button (click)='sendEmail(newA,newOggetto,newTesto)' type="submit" class="btn btn-default"  class="bg-primary">
       invia
     </button>
   </form>
