@@ -14,4 +14,11 @@
     </button>
   </form>
 </div>
-<app-article class='card'></app-article>
+
+<div class="container">
+  <app-article
+    *ngFor="let art of articles" [article]="art">
+  </app-article>
+</div>
+
+<app-article *ngFor="let art of sortedArticles()" [article]="art"></app-article>
