@@ -22,9 +22,6 @@ export class FooComponent implements OnInit {
     this.http = http
    }
 
-  ngOnInit(): void {
-  }
-
   makerequest(): void {
     this.loading = true;
 
@@ -52,6 +49,16 @@ export class FooComponent implements OnInit {
       this.data = data;
       this.loading = false;
     });
+  }
+
+  makeTypedRequest(): void {
+
+    this.oFoo = this.http.get<Foo[]>('https://jsonplaceholder.typicode.com/posts');
+    this.oFoo.subscribe(data => {this.fooData = data;});
+
+  }
+
+  ngOnInit(): void {
   }
 
 }
