@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Email} from './email.model';
+import { Email } from './email.model';
 
 
 @Component({
@@ -13,7 +13,6 @@ export class AppComponent {
   emails:Email[] = new Array<Email>();
 
   constructor(){
-    this.emails = []
 
   }
 

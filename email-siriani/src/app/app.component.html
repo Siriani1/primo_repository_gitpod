@@ -16,3 +16,11 @@
       invia
     </button>
   </form>
+</div>
+<div>
+  <ul>
+    <li *ngFor='let x for emails'>
+      <app-sent-mail [email] = 'x'></app-sent-mail>
+    </li>
+  </ul>
+</div>
