@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Email } from './models/email.model';
-import { TestObject } from 'protractor/built/driverProviders';
+import {Email} from './email.model';
+
 
 @Component({
   selector: 'app-root',
@@ -8,18 +8,19 @@ import { TestObject } from 'protractor/built/driverProviders';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  emails:Email[];
+  title = 'email-siriani';
+
+  emails:Email[] = new Array<Email>();
 
   constructor(){
     this.emails = []
 
   }
 
-  sendEmail(a:HTMLInputElement, oggetto:HTMLInputElement, testo:HTMLInputElement): boolean{
+
+  addEmail(a: HTMLInputElement, oggetto: HTMLInputElement, testo : HTMLInputElement): boolean {
     this.emails.push(new Email(a.value,oggetto.value,testo.value))
-    a.value = '';
-    oggetto.value = '';
-    testo.value = '';
+    console.log(this.emails)
     return false;
   }
 }
