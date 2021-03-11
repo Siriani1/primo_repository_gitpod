@@ -11,6 +11,16 @@ export class SentMailComponent implements OnInit {
 
   constructor() { }
 
+  espando: boolean;
+
+  espandi(): void {
+    if(this.espando == true){
+      this.espando = false;
+    }else{
+      this.espando = true;
+    }
+  }
+
   ngOnInit(): void {
   }
 

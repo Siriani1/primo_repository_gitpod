@@ -22,4 +22,5 @@ export class AppComponent {
     console.log(this.emails)
     return false;
   }
+
 }
