@@ -8,9 +8,15 @@ import { Post } from '../post.model';
 })
 export class PostComponent implements OnInit {
   @Input() post: Post;
+  commento = new Array<string>();
 
   Like(): boolean{
     this.post.voteUp();
+    return false;
+  }
+
+  addCommento(commento: HTMLInputElement): boolean{
+    this.commento.push(commento.value);
     return false;
   }
 

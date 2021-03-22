@@ -1,4 +1,16 @@
 <div>
   <p>{{post.nome}} - {{post.testo}}</p>
-  <button href (click)="Like()" class="btn btn-secondary"> Like  </button> <p>{{post.like}} </p>
+  <button (click)="Like()" class="btn btn-secondary"> Like  </button> <p>{{post.like}} </p>
+</div>
+<div>
+  <label for="email" ></label>
+  <input placeholder="Scrivi commento" name="commento" #newCommento>
+  <button (click)='addCommento(newCommento)'>Commenta</button>
+</div>
+<div>
+  <ul>
+    <li *ngFor='let a of commento'>
+      <app-comment [commenta] = 'a'></app-comment>
+    </li>
+  </ul>
 </div>
