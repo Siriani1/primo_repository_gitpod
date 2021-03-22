@@ -9,6 +9,11 @@ import { Post } from '../post.model';
 export class PostComponent implements OnInit {
   @Input() post: Post;
 
+  Like(): boolean{
+    this.post.voteUp();
+    return false;
+  }
+
   constructor() { }
 
   ngOnInit(): void {
