@@ -12,3 +12,10 @@
       invia
   </button>
 </form>
+<div>
+  <ul>
+    <li *ngFor='let x of posts'>
+      <app-post [post] = 'x'></app-post>
+    </li>
+  </ul>
+</div>
