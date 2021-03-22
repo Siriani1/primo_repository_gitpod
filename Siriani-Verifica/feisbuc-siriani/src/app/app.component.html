@@ -1,14 +1,14 @@
 <form>
   <div>
       <label for="email" >Nome</label>
-      <input placeholder="Gino" name="a" #newA>
+      <input placeholder="Gino" name="nome" #newNome>
   </div>
   <br>
   <div>
       <label for="email" ></label>
-      <input placeholder="Scrivi qualcosa" name="a" #newA>
+      <input placeholder="Scrivi qualcosa" name="testo" #newTesto>
   </div>
-  <button type="submit" >
+  <button (click)='addPost(newNome,newTesto)' type="submit" >
       invia
   </button>
 </form>

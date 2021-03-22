@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Post } from './post.model';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'feisbuc-siriani';
+
+  posts:Post[] = new Array<Post>();
+
+  addPost(nome: HTMLInputElement, testo: HTMLInputElement): boolean{
+    this.posts.push(new Post(nome.value,testo.value))
+    console.log(this.posts)
+    return false;
+  }
 }
