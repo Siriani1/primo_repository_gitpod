@@ -5,7 +5,7 @@ export class Mezzo{
     public tipo: string,
     public descrizione: string,
     public tariffa: string,
-    public valutazioneMedia: string
+    public valutazionemedia: string
   ){
 
   }

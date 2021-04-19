@@ -1,2 +1,15 @@
 <p>lista mezzi</p>
-{{listaMezzi | json}}
+
+<ul>
+  <li *ngFor="let mezzo of listaMezzi">
+    tipo mezzo: {{mezzo.tipo}} <br>
+    descrizione mezzo: {{mezzo.descrizione}} <br>
+    tariffa: {{mezzo.tariffa}} <br>
+    valutazione media: {{mezzo.valutazionemedia}} <br>
+    <button (click)="Noleggia(mezzo)">Noleggia</button>
+    <hr>
+  </li>
+</ul>
+
+
+

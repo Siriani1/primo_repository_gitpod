@@ -13,4 +13,7 @@ export class DrivingListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  Noleggia(mezzo){
+    console.log(mezzo);
+  }
 }
