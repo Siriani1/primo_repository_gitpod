@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Mezzo } from './model/driving.model'
 import { Observable } from 'rxjs';
+import { Rent } from './model/rent.model';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,9 @@ import { Observable } from 'rxjs';
 export class AppComponent implements OnInit {
   obsMezzi: Observable<Mezzo[]>;
   listaMezzi: Mezzo[];
+  rented: Mezzo = new Mezzo("#","#","#","#");
+
+  rentedVector: Rent[] = new Array<Rent>();
 // importare dentro app.module.ts HttpClientModule
   constructor(private http: HttpClient){}
 
