@@ -1,3 +1,10 @@
 <p>Lista mezzi noleggiato</p>
 
- {{rentedVector | json}}
+<ul >
+  <li *ngFor="let x of rentedVector">
+    {{x.numeroNoleggi}}
+    {{x.mezzo}}
+  </li>
+</ul>
+
+

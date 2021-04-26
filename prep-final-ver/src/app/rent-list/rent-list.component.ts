@@ -7,8 +7,8 @@ import { Rent } from '../model/rent.model';
   styleUrls: ['./rent-list.component.css']
 })
 export class RentListComponent implements OnInit {
+  @Input() rentedVector: Rent[] = new Array<Rent>();
 
-  @Input() rentedVector: Rent[];
   constructor() {}
 
   ngOnInit(): void {
