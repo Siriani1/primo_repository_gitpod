@@ -8,14 +8,17 @@ import { Vegetali } from '../model/vegetables.model';
 })
 export class VegetableListComponent implements OnInit {
   @Input() listaVeg : Vegetali[];
+  @Input() details: Vegetali;
   constructor() { }
 
   ngOnInit(): void {
     console.log()
   }
 
-  Compra(veg){
-    console.log(veg)
+  Compra(veg: Vegetali){
+    this.details.nome = veg.nome;
+    this.details.descrizione = veg.descrizione;
+    this.details.prezzo = veg.prezzo;
   }
 
 

@@ -14,6 +14,8 @@ export class AppComponent implements OnInit {
   listaVeg : Vegetali[];
   constructor(private http: HttpClient){}
 
+  details: Vegetali = new Vegetali("#","#","#");
+
   ngOnInit(): void {
     this.obsVeg = this.http.get<Vegetali[]>('https://my-json-server.typicode.com/malizia-g/fine_anno_exp/verdure');
     this.obsVeg.subscribe(this.getVeg);
