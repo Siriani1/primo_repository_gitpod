@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { VegetableListComponent } from './vegetable-list/vegetable-list.component';
 import { DetailsComponent } from './details/details.component';
+import { CarrelloComponent } from './carrello/carrello.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VegetableListComponent,
-    DetailsComponent
+    DetailsComponent,
+    CarrelloComponent
   ],
   imports: [
     BrowserModule,
