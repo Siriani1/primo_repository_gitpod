@@ -11,6 +11,13 @@ export class VegetableListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log()
   }
+
+  Compra(veg){
+    console.log(veg)
+  }
+
+
 
 }
